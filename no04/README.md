@@ -11,7 +11,7 @@ sbx create --name demo shell .      # このフォルダで
 sbx setup ssh                       # 一度だけ
 ```
 
-1. VS Code の **Remote-SSH: Connect to Host...** で `demo.sbx` を手で入力（一覧には出ません）
+1. VS Code の **Remote-SSH: Connect to Host...** で `demo.sbx` を手で入力（一覧には出ません）。**Open Folder ではこのフォルダと同じ絶対パスを開く**（既定で出る `/home/agent/` 配下は手元とつながっていません。同じパスなら、どちらで直しても互いにすぐ見えます）
 2. VS Code のターミナル（檻の中）で `python3 app.py`
 3. 手元の端末で `sbx ports demo --publish 8080:3000` → ブラウザで `http://127.0.0.1:8080`
 4. `app.py` の `TITLE = "..."` を直して保存 → ブラウザを再読み込み
